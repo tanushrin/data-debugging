@@ -3,9 +3,13 @@
 import sys
 
 def full_name(first_name, last_name):
+    #breakpoint() # equivalent to `ipdb.set_trace()`
     """returns the full name"""
-    name = f"{first_name.capitalize()}{last_name.capitalize()}"
-    
+    if first_name and last_name != "":
+        name = f"{first_name.capitalize()} {last_name.capitalize()}"
+    else:
+        name = f"{first_name.capitalize()}{last_name.capitalize()}"
+
     return name
 
 if __name__ == "__main__":
